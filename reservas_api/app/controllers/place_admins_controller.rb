@@ -1,0 +1,2 @@
+class PlaceAdminsController < ApplicationController
+end

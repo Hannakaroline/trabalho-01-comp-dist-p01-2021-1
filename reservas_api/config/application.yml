@@ -1,0 +1,40 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+
+RESERVAS-API_RSA-PRIVATE-KEY: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIEpQIBAAKCAQEAulBqLdJRE9aDM5vhmQp0PoQx7Y/2pJkTpoa14z0oQM77YEek
+  SS46BufrFf+DfkoKe2WYEmUO641a5qNZ11ifesLMT7wkAjzrA6JZFjk37E22Pxs6
+  Xa4JWXTRC+lFGN8JOhn8d51K88FWrEkJIhd+twBxB97PyEWlRsc08bfrqxGrTY5M
+  Adgu/ssd9JqLsNvNJ/P9kt8jAs3xbQYHjiKYUigJn5IrGmP3YTW0kKMXiBAHJIC3
+  EGr8KSvcHYGZzVCkRgJ8MiN+SQT023xLFEoeCsHNdyDNtPO7jE51FN0mq07ougp2
+  tstU/3YDasOvYBLy1GOD4kAdDIXeW7opz8IA+QIDAQABAoIBAEO8DH4QIi3GJPjU
+  SRYseMppoQUu+4onpL875lBw4Xt+RGFialW4mpv8ILlkpVd6b4khDEJTvzLftxZ2
+  eKkTrRciTskGK0ktAHvXv++WacBdGE6lBXkdVoTRNVbRPa+nFmGrJOAPrTolJe+I
+  tetRA15gqLclyACVYVrz/UmLhgAw03rwjy1c2RnlxhJIc15D2jStd4VEsHdYDn29
+  dyNkVGzWOYCbu9fguT62HRATYBn/3Z7GWsSfC5fqXFioJEEJfqlOi/iyuvQaWcjr
+  2UJcePytOzIj3FM5Kbwog4kum0kpZ1uuPr9iN5eJhAXJ025s3QFKip57itI+hzx6
+  MPPlliECgYEA3B47J/6yZR4ZLUGETimtjBpu20QMIi4lITps8nWV0Bb9wSgsXVyX
+  SIBS2rmD3FZfaLrD3aVbmuNfZK0Du9byLm3i3OX8uINVIDQ1hNBirwmGmTg9a1LK
+  xogfjGF/rPSM5bjpyBQq5xQuavWIe6p21lrJeQ3xm+suyK5Pa8k7HVUCgYEA2K+B
+  ytVPn3i+JXnrkRHxwdTbUyURj5qnlxTsBWDNVmQCT0T+DJ9t52wkgK4NMy90lQ7y
+  RrORAAYl/Mo/G+ciycsskQPrQFvWv6qW+E+pVkerl/ZD3ZGoDhR4JbCn7iT9W++u
+  yQGkKHKFNaiMhnYbND2F4u87FfHbLxaXRh1+NRUCgYEAtCnGT4kHaP5GqyUJ7pPs
+  aVUlUTCUIdHVMCpLC/S0R1raHaQNE+l6JaxqpH3dcJX9h5H+SMdUgCUEajm2aaOY
+  G+pzGkzgGgHcxfwVpfyOGShZ08UVeGeOcwrtj5Ap2V1ciZZdOxdOuk5pY8BOErJG
+  jFJIv11rWSwY4cbSWK2fRfUCgYEAzr8u5RyAm1U2gEWDKWjothvlpMBysAVNMI9K
+  35rMcUh9F6tphxu7XptFfO4VNChsYSjgq+r7R/2V00wZyQLRo57TCA6oMUEvdrNK
+  1uQTW3qI1Dap7EflBIItXTDgGg57G3Rm3e1N9zXFujv20Pjx3fdxvuSqCLc6fgRd
+  FA5h9D0CgYEAnuzuZQDYXb0w4T1UGxrZV6AatPTLgtRfWQ2GRSWyWq1zB6DiRj+S
+  IWSiBXiiMWUzC4olsk1Njo/4aIDZKtSvhAp0jobtmajciTAEu+o13Utvx7Yd6KLH
+  T/YNYBxRc/PWbL0EpR1RhYH5reJrnPC7LrRY0KFvnDG3gjnj6RlsqHA=
+  -----END RSA PRIVATE KEY-----

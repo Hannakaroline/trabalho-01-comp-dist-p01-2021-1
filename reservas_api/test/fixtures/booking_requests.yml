@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from: 2021-06-13 11:07:53
+  to: 2021-06-13 11:07:53
+  place: one
+  user: one
+  accepted: false
+  note: MyString
+  booking: one
+
+two:
+  from: 2021-06-13 11:07:53
+  to: 2021-06-13 11:07:53
+  place: two
+  user: two
+  accepted: false
+  note: MyString
+  booking: two
