@@ -203,7 +203,7 @@ pickle-email-*.html
 /reservas_api/tmp/*
 !/reservas_api/log/.keep
 !/reservas_api/tmp/.keep
-
+!/reservas_api/log/development.log
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
 /reservas_api/config/initializers/secret_token.rb
 /reservas_api/config/master.key
