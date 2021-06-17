@@ -197,6 +197,7 @@ capybara-*.html
 *.orig
 rerun.txt
 pickle-email-*.html
+./reservas_api/tmp/*
 
 # Ignore all logfiles and tempfiles.
 /log/*
