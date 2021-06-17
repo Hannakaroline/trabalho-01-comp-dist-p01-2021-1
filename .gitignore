@@ -187,39 +187,38 @@ Temporary Items
 ### Rails ###
 *.rbc
 capybara-*.html
-.rspec
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/db/*.sqlite3-[0-9]*
-/public/system
-/coverage/
-/spec/tmp
+/reservas_api/.rspec
+/reservas_api/db/*.sqlite3
+/reservas_api/db/*.sqlite3-journal
+/reservas_api/db/*.sqlite3-[0-9]*
+/reservas_api/public/system
+/reservas_api/coverage/
+/reservas_api/spec/tmp
 *.orig
-rerun.txt
+/reservas_api/rerun.txt
 pickle-email-*.html
-./reservas_api/tmp/*
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+/reservas_api/log/*
+/reservas_api/tmp/*
+!/reservas_api/log/.keep
+!/reservas_api/tmp/.keep
 
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
-config/initializers/secret_token.rb
-config/master.key
+/reservas_api/config/initializers/secret_token.rb
+/reservas_api/config/master.key
 
 # Only include if you have production secrets in this file, which is no longer a Rails default
 # config/secrets.yml
 
 # dotenv, dotenv-rails
 # TODO Comment out these rules if environment variables can be committed
-.env
-.env.*
+/reservas_api/.env
+/reservas_api/.env.*
 
 ## Environment normalization:
-/.bundle
-/vendor/bundle
+/reservas_api/.bundle
+/reservas_api/vendor/bundle
 
 # these should all be checked in to normalize the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
