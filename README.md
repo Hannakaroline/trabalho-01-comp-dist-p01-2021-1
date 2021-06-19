@@ -1,5 +1,8 @@
 # trabalho-01-comp-dist-p01-2021-1
 
+## Casos de uso
+Favor acessar o link público: https://docs.google.com/document/d/1Lp2tun9dQo9UME1XlsZWOrHoV1gejXIxjPVSkxYEv1Y/edit?usp=sharing
+
 ## Pré-requisitos
 
 - Docker: [Guia de Instalação Docker](https://docs.docker.com/get-docker/)
