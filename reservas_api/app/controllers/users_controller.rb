@@ -3,6 +3,12 @@ require 'jwt'
 
 class UsersController < ApplicationController
 
+  # Faz o signup de novas contas
+  # Valida e-mail
+  # Valida força da senha
+  # Valida confirmação da senha
+  # Responde com os dados do novo usuário criado ou
+  # Responde com um erro se as validações falharem ou já existir um e-mail cadastrado com o e-mail que se tentou fazer o signup
   def signup
     signup_params = signup_params_filter
     validation = Signup.new(signup_params).validate
@@ -22,6 +28,7 @@ class UsersController < ApplicationController
     render json: @user
   end
 
+  # Faz login, valida se o e-mail existe e se a senha bate com o que está salvo no banco
   def login
     login_params = login_params_filter
     validation = Login.new(login_params).validate
@@ -45,6 +52,7 @@ class UsersController < ApplicationController
 
   private
 
+  # Métodos privados para filtrar parametros de input nas requests
   def signup_params_filter
     params.permit(:name, :email, :password, :password_confirmation)
   end
@@ -54,6 +62,7 @@ class UsersController < ApplicationController
   end
 end
 
+# Validação de parametros
 class MyPredicates
   include Hanami::Validations::Predicates
 
