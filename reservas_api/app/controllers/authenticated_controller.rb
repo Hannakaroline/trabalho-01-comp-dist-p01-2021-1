@@ -1,4 +1,7 @@
 class AuthenticatedController < ApplicationController
+  # Executa a autenticação do usuário baseado no header enviado na request 'x-access-token'
+  # O método authenticate_request é executado antes de todas requests feitas pelos controllers que herdam desse controller
+  # Retorna um erro de autenticação 401 se o usuário não estiver autenticado
   before_action :authenticate_request
   attr_reader :current_user
 
