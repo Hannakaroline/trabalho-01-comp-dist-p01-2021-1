@@ -1,11 +1,13 @@
 require 'hanami/validations'
 
 class PlacesController < AuthenticatedController
+  # Lista os lugares cadastrados por um usuário (que o user é admin)
   def index
     @places = @current_user.places
     render json: @places
   end
 
+  # Cria um lugar para um usuário, validando a presença de campos necessários
   def create
     validations = PlaceForm.new(create_params_filter).validate
     unless validations.success?
@@ -17,6 +19,7 @@ class PlacesController < AuthenticatedController
     render json: @place
   end
 
+  # Atualiza um lugar
   def update
     update_params = update_params_filter
     @place = @current_user.places.find_by(id: update_params[:id])
@@ -35,6 +38,7 @@ class PlacesController < AuthenticatedController
     render json: @place
   end
 
+  # Habilita um lugar para reservas
   def enable
     update_params = update_params_filter
     @place = @current_user.places.find_by(id: update_params[:id])
@@ -46,6 +50,7 @@ class PlacesController < AuthenticatedController
     render json: @place
   end
 
+  # Desabilita um lugar para reservas
   def disable
     update_params = update_params_filter
     @place = @current_user.places.find_by(id: update_params[:id])
@@ -59,6 +64,7 @@ class PlacesController < AuthenticatedController
     render json: @place
   end
 
+  # Busca lugares para reserva de acordo com nome e endereço, o usuário da API pode passar url parameters para o filtro
   def search
     search_params = params.permit(:name, :address)
 
@@ -75,6 +81,7 @@ class PlacesController < AuthenticatedController
     render json: @result
   end
 
+  # Mostra as reservas de um lugar daqui para frente
   def bookings
     @place = Place.find_by(id: params[:id])
 
