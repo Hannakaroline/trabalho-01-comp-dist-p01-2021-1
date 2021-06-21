@@ -1,6 +1,11 @@
 require 'hanami/validations'
 
 class BookingRequestsController < AuthenticatedController
+  # Tenta criar uma solicitação de reserva para um lugar
+  # Se o lugar já estiver reservado, já responde com um erro 409 de conflito para indicar que já existe uma reserva no período solicitado
+  # Se o lugar não estiver reservado e o lugar estiver configurado para aceitar reservas automaticamente, a reserva é feita
+  # Se o lugar não estiver reservado, mas o lugar não estiver configurado para aceitar reservas automaticamente, a solicitação de reserva é criada
+  # Responde com 404 se o lugar não existir
   def create
     create_params = create_params_filter
     puts create_params.inspect
@@ -48,6 +53,10 @@ class BookingRequestsController < AuthenticatedController
     render json: @booking_request
   end
 
+  # Deleta uma solicitação de reserva pendente
+  # Não é possível apagar uma solicitação já aceita
+  # Responde com um erro se a solicitação não existir ou se não pertencer ao usuário
+  # Também responde com um erro se a solicitação já estiver cancelada ou aceita
   def destroy
     @booking_request = @current_user.booking_requests.find_by(id: params[:id])
     unless @booking_request
@@ -63,16 +72,22 @@ class BookingRequestsController < AuthenticatedController
     end
   end
 
+  # Lista as solicitações de reserva feitas por um usuário que ainda não foram respondidas
   def made
     @booking_requests = @current_user.booking_requests.where('accepted is null OR accepted is false').last(100)
     render json: @booking_requests
   end
 
+  # Lista as solicitações recebeidas por todos os lugares que um usuário possui que ainda nao foram respondidas
   def received
     @booking_requests = BookingRequest.joins("JOIN place_admins on booking_requests.place_id = place_admins.place_id and place_admins.user_id = #{@current_user.id}")
     render json: @booking_requests
   end
 
+  # Responde uma solicitação de reserva
+  # Valida a existência da solicitação de reserva e se já foi respondida
+  # Valida se o usuário é admin do lugar
+  # Atualiza a solicitação com a resposta e cria uma reserva no banco se a reserva for aceita
   def answer
     answer_params = answer_params_filter
     @booking_request = BookingRequest.find_by(id: answer_params[:id], accepted: nil)
